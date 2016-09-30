@@ -12,11 +12,10 @@ public class MergeIntervals {
     public static void main(String args[])
     {
         ArrayList<Interval> sample = new ArrayList<Interval>();
-        sample.add(new Interval(1,3));
-        sample.add(new Interval(2,6));
+        sample.add(new Interval(1,4));
+        sample.add(new Interval(3,6));
         sample.add(new Interval(15,18));
         sample.add(new Interval(8,10));
-        Comparator<Interval> comparator = new SortIntervals();
         Collections.sort(sample,new SortIntervals());
         ArrayList<Interval> result = new ArrayList<Interval>();
         Interval prev = sample.get(0);

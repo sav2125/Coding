@@ -20,10 +20,8 @@ public class CombinationSumI {
         {
             if(sum + candidates[i] > target)
                 break;
-            sum = sum + candidates[i];
             output.add(candidates[i]);
-            combinationSumUtil(result,candidates,target,i,output,sum);
-            sum = sum - candidates[i];
+            combinationSumUtil(result,candidates,target,i,output,sum + candidates[i]);
             output.remove(output.size() - 1);
         }
     }
