@@ -28,10 +28,21 @@ public class WordBreak {
     }
     public static void main(String args[])
     {
-        String s = "leetcode";
+        String s = "leetleetcode";
         ArrayList<String> dict = new ArrayList<>();
-        dict.add("leet");
-        dict.add("code");
+        dict.add("mobile");
+        dict.add("samsung");
+        dict.add("sam");
+        dict.add("sung");
+        dict.add("man");
+        dict.add("mango");
+        dict.add("icecream");
+        dict.add("and");
+        dict.add("go");
+        dict.add("i");
+        dict.add("love");
+        dict.add("ice");
+        dict.add("cream");
         System.out.print(wordbreak(s,dict));
     }
 }
