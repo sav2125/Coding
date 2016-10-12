@@ -2,6 +2,12 @@
  * Created by siddharthvarshney on 9/12/16.
  */
 public class Permutations {
+    static void swap(char[] num, int left, int right)
+    {
+        char temp = num[left];
+        num[left] = num[right];
+        num[right] = temp;
+    }
     static public void permutation(char[] num, int start,int end)
     {
         if(start == end)
@@ -12,13 +18,9 @@ public class Permutations {
         {
             for (int i = start; i <= end; i++)
             {
-                char temp = num[start];
-                num[start] = num[i];
-                num[i] = temp;
+                swap(num,start,i);
                 permutation(num, start + 1, end);
-                temp = num[start];
-                num[start] = num[i];
-                num[i] = temp;
+                swap(num,start,i);
             }
         }
     }

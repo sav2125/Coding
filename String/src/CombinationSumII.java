@@ -21,10 +21,8 @@ public class CombinationSumII {
             }
             if(sum + candidates[i] > target)
                 return;
-            //sum = sum + candidates[i];
             output.add(candidates[i]);
             combinationSumUtil(result,candidates,target,i + 1,output, sum + candidates[i]);
-            //sum = sum - candidates[i];
             output.remove(output.size() - 1);
         }
     }

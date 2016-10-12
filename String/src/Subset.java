@@ -12,9 +12,7 @@ public class Subset {
         for(int i = index; i < array.length; i++)
         {
             result.add(array[i]);
-            for(int j=0;j<result.size();j++)
-                System.out.print(result.get(j));
-            System.out.println();
+            System.out.println(result);
             subset(array, i + 1, result);
             result.remove(result.size() - 1);
         }

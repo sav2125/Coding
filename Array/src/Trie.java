@@ -97,6 +97,35 @@ public class Trie {
         getWords(curr,word,result);
         return result;
     }
+    public boolean regex(String word)
+    {
+        int wordLen = word.length();
+        TrieNode curr = root;
+        for(int i = 0; i < wordLen; i++)
+        {
+            char ch = word.charAt(i);
+            if(ch != '.')
+            {
+                if(curr.child[ch - 'a'] == null)
+                    return false;
+                curr = curr.child[ch - 'a'];
+            }
+            else
+            {
+                for(int j = 0; j < 26; j++)
+                {
+                    if(curr.child[j] != null)
+                    {
+
+                    }
+                }
+            }
+        }
+        if(curr.isLeaf == false)
+            return false;
+        else
+        return true;
+    }
     public static void main(String args[])
     {
         Trie trie = new Trie();
@@ -112,6 +141,7 @@ public class Trie {
         {
             System.out.println(s);
         }
+        trie.regex("a..");
     }
 
 }

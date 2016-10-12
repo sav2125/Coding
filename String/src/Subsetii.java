@@ -5,15 +5,6 @@ import java.util.Arrays;
  * Created by siddharthvarshney on 9/12/16.
  */
 public class Subsetii {
-    static public boolean dup(int[] array, int start, int end)
-    {
-        for(int i=start;i <=end-1;i++)
-        {
-            if(array[i] == array[end])
-                return true;
-        }
-        return false;
-    }
     static void subsetii(int [] array, int index, ArrayList<Integer> result, ArrayList<ArrayList<Integer>> finalResult)
     {
         if(index >= array.length)

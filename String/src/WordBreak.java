@@ -12,7 +12,7 @@ public class WordBreak {
         {
             arr[i] = 0;
         }
-        arr[0] = 1;
+        arr[0]  = 1;
         for(int i = 1; i < arr.length; i++)
         {
             for(int j = 0; j < i; j++)
